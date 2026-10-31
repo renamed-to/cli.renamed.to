@@ -11,7 +11,7 @@ WORKDIR /app
 COPY package.json ./
 
 # Install pnpm and production dependencies only
-RUN corepack enable && corepack prepare pnpm@9.0.0 --activate
+RUN corepack enable && corepack prepare pnpm@12.16.1 --activate
 RUN pnpm install --prod
 
 # Copy pre-built dist (build locally first with pnpm build)
